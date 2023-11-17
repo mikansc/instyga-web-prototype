@@ -55,7 +55,7 @@ export const AccountBox = () => {
         {selectedTab === TABS.LOGIN && (
           <>
             <h4 className="card-title pt-3">Faça o Login</h4>
-            <p className="mb-5">
+            <p className="mb-4">
               Use suas credenciais para acessar a plataforma
             </p>
             <LoginForm />
@@ -64,7 +64,7 @@ export const AccountBox = () => {
         {selectedTab === TABS.REGISTER && (
           <>
             <h4 className="card-title pt-3">Registre-se</h4>
-            <p className="mb-5">Crie sua conta para acessar a plataforma</p>
+            <p className="mb-4">Crie sua conta para acessar a plataforma</p>
             <RegisterForm />
           </>
         )}
