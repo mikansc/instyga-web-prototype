@@ -214,17 +214,6 @@ export default function RegisterPage() {
           </div>
         </div>
       </div>
-
-      <div className="col-8 offset-2 border p-5 d-flex flex-column">
-        <div className="mt-4 w-100">
-          <a className="btn btn-primary" href="b2c-empty-premium.html">
-            Finalizar cadastro
-          </a>
-          <a className="btn btn-warning" href="index.html">
-            Voltar
-          </a>
-        </div>
-      </div>
     </div>
   );
 }
