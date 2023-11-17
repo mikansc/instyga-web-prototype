@@ -1,3 +1,5 @@
+import DashboardPage from "@/components/pages/DashboardPage";
+
 export default function Dashboard() {
-  return <div className="pt-5">Dashboard</div>;
+  return <DashboardPage />;
 }
