@@ -17,7 +17,12 @@ export const AccountBox = () => {
   };
 
   return (
-    <div className="card">
+    <div
+      className="card"
+      style={{
+        transform: "translateY(-40px)",
+      }}
+    >
       <div className="card-header bg-transparent">
         <ul className="nav nav-tabs card-header-tabs">
           <li className="nav-item">
@@ -41,7 +46,11 @@ export const AccountBox = () => {
       </div>
       <div
         className="card-body text-start"
-        style={{ minHeight: 450, maxHeight: 450, overflowY: "auto" }}
+        style={{
+          minHeight: 400,
+          maxHeight: 400,
+          overflowY: "auto",
+        }}
       >
         {selectedTab === TABS.LOGIN && (
           <>
