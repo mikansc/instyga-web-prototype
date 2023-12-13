@@ -2,7 +2,7 @@
 
 import { useSelectedLayoutSegments } from "next/navigation";
 
-const segmentsMap = {
+const segmentsMap: { [key: string]: string } = {
   dashboard: "Home",
   "all-paths": "Certificações",
   "all-tests": "Avaliações",
