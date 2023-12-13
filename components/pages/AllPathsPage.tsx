@@ -91,7 +91,7 @@ export const AllPathsPage = () => {
                     className="img-thumbnail d-block"
                   />
                 </div>
-                <div className="">
+                <div className="flex-grow-1 mx-3">
                   <h5 className="card-title">{certificationPath.title}</h5>
                   <p className="card-text">{certificationPath.description}</p>
                 </div>
