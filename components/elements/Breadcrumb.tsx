@@ -4,27 +4,28 @@ import { useSelectedLayoutSegments } from "next/navigation";
 
 const segmentsMap: { [key: string]: string } = {
   dashboard: "Home",
-  "all-paths": "Certificações",
-  "all-tests": "Avaliações",
+  paths: "Certificações",
+  tests: "Avaliações",
 };
 
 export const Breadcrumb = () => {
   const segments = useSelectedLayoutSegments();
-  console.log(segments);
 
   return (
     <ol className="breadcrumb">
       {segments.map((segment, index) => {
+        const segmentName = segmentsMap[segment] ?? "Detalhes";
         const Component = index === segments.length - 1 ? "li" : "a";
-
+        const mountSegmentUrl = (segment: string) => {
+          return `/${segments.slice(0, index + 1).join("/")}`;
+        };
         return (
           <Component
             key={index}
             className="breadcrumb-item"
-            // href={index === 0 ? "/" : segments.slice(0, index + 1).join("/")}
-            href={index === 0 ? `/${segment}` : segment}
+            href={mountSegmentUrl(segment)}
           >
-            {segmentsMap[segment]}
+            {segmentName}
           </Component>
         );
       })}

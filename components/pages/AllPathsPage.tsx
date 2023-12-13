@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SectionTitleBlock } from "./SectionTitleBlock";
 
 let certificationPaths = [
@@ -6,46 +7,55 @@ let certificationPaths = [
     id: 1,
     image: "front-end.png",
     title: "Desenvolvedor Web Junior",
+    description: "Trilha de certificação para desenvolvedor web junior",
   },
   {
     id: 2,
     image: "front-end.png",
     title: "Desenvolvedor Web Pleno",
+    description: "Trilha de certificação para desenvolvedor web pleno",
   },
   {
     id: 3,
     image: "front-end.png",
     title: "Desenvolvedor Web Sênior",
+    description: "Trilha de certificação para desenvolvedor web sênior",
   },
   {
     id: 4,
     image: "javascript.png",
     title: "Desenvolvedor JavaScript Junior",
+    description: "Trilha de certificação para desenvolvedor JavaScript junior",
   },
   {
     id: 5,
     image: "javascript.png",
     title: "Desenvolvedor JavaScript Pleno",
+    description: "Trilha de certificação para desenvolvedor JavaScript pleno",
   },
   {
     id: 6,
     image: "javascript.png",
     title: "Desenvolvedor JavaScript Sênior",
+    description: "Trilha de certificação para desenvolvedor JavaScript sênior",
   },
   {
     id: 13,
     image: "csharp.png",
     title: "Desenvolvedor C# Junior",
+    description: "Trilha de certificação para desenvolvedor C# junior",
   },
   {
     id: 14,
     image: "csharp.png",
     title: "Desenvolvedor C# Pleno",
+    description: "Trilha de certificação para desenvolvedor C# pleno",
   },
   {
     id: 15,
     image: "csharp.png",
     title: "Desenvolvedor C# Sênior",
+    description: "Trilha de certificação para desenvolvedor C# sênior",
   },
 ];
 
@@ -82,16 +92,16 @@ export const AllPathsPage = () => {
                   />
                 </div>
                 <div className="">
-                  {/* <div className="card-img-overlay"> */}
                   <h5 className="card-title">{certificationPath.title}</h5>
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
+                  <p className="card-text">{certificationPath.description}</p>
                 </div>
                 <div className="align-self-center">
-                  <button className="btn btn-primary">Ver certificação</button>
+                  <Link
+                    href={`paths/${String(certificationPath.id)}`}
+                    className="btn btn-primary"
+                  >
+                    Ver certificação
+                  </Link>
                 </div>
               </div>
             </div>
