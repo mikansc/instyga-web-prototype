@@ -1,12 +1,6 @@
 import { SectionTitleBlock } from "../SectionTitleBlock";
+import { Badge } from "../elements/Badge";
 import { Container } from "../templates/Container";
-// competencies: [
-//   "Código",
-//   "Linguagem",
-//   "Desenvolvimento de Software",
-//   "Interpretação de código",
-//   "Debugging",
-// ],
 
 let tests = [
   {
@@ -48,24 +42,22 @@ export const AllTestsPage = () => {
                   <h5 className="card-title">{test.title}</h5>
                   <div className="d-flex mt-2">
                     {test.competencies.map((competency) => (
-                      <span
-                        key={competency}
-                        className="badge bg-secondary me-1"
-                      >
+                      <Badge key={competency} color="secondary">
                         {competency}
-                      </span>
+                      </Badge>
                     ))}
-                    {test.certifications.map((certification) => (
-                      <span
-                        key={certification}
-                        className="badge bg-primary me-1"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="bottom"
-                        data-bs-title="This top tooltip is themed via CSS variables."
-                      >
-                        {certification}
-                      </span>
-                    ))}
+                    {test.certifications.map((certification) => {
+                      return (
+                        <Badge
+                          link="/certifications/1"
+                          key={certification}
+                          color="primary"
+                          tip={`Esta avaliação é parte da certificação ${certification}`}
+                        >
+                          {certification}
+                        </Badge>
+                      );
+                    })}
                   </div>
                 </div>
                 <div className="">
