@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SectionTitleBlock } from "./SectionTitleBlock";
+import { SectionTitleBlock } from "../pages/SectionTitleBlock";
 
 export const NoCertificationPathStartedHero = () => {
   return (

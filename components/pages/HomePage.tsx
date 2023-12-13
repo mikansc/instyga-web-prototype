@@ -1,5 +1,5 @@
 import imageBg from "../../assets/images/image-bg.avif";
-import { AccountBox } from "../AccountBox";
+import { AccountBox } from "../elements/AccountBox";
 import { Container } from "../templates/Container";
 
 export const HomePage = () => {

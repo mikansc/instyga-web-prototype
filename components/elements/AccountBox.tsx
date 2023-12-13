@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { LoginForm } from "./LoginForm";
-import { RegisterForm } from "./RegisterForm";
+import { LoginForm } from "../templates/LoginForm";
+import { RegisterForm } from "../templates/RegisterForm";
 
 const TABS = {
   LOGIN: 0,

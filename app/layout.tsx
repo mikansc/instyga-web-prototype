@@ -1,5 +1,5 @@
-import { Footer } from "@/components/Footer";
-import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/pages/Footer";
+import { Navbar } from "@/components/pages/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
 import Script from "next/script";

@@ -1,5 +1,5 @@
-import { SectionTitleBlock } from "../SectionTitleBlock";
 import { Badge } from "../elements/Badge";
+import { SectionTitleBlock } from "./SectionTitleBlock";
 
 let tests = [
   {

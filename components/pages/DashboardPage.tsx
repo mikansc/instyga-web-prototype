@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import { CurrentCertificationPathHero } from "../CurrentCertificationPathHero";
-import { NoCertificationPathStartedHero } from "../NoCertificationPathStartedHero";
-import { SectionTitleBlock } from "../SectionTitleBlock";
+import { CurrentCertificationPathHero } from "../templates/CurrentCertificationPathHero";
+import { NoCertificationPathStartedHero } from "../templates/NoCertificationPathStartedHero";
+import { SectionTitleBlock } from "./SectionTitleBlock";
 
 let courses = [
   {

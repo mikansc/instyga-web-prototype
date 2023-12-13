@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SectionTitleBlock } from "../SectionTitleBlock";
+import { SectionTitleBlock } from "./SectionTitleBlock";
 
 let certificationPaths = [
   {
