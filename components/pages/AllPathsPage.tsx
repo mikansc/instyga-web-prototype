@@ -53,7 +53,7 @@ export const AllPathsPage = () => {
   return (
     <Container>
       <SectionTitleBlock
-        title="Certificações disponívels"
+        title="Certificações disponíveis"
         subtitle="Escolha a certificação desejada"
       />
       <div className="row row-cols-2 mt-3">
