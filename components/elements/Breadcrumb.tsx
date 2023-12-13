@@ -10,23 +10,27 @@ const segmentsMap: { [key: string]: string } = {
 
 export const Breadcrumb = () => {
   const segments = useSelectedLayoutSegments();
+  const isRootPage = segments.length <= 1;
+
+  if (isRootPage) return null; // se estiver na dashboard
 
   return (
     <ol className="breadcrumb">
       {segments.map((segment, index) => {
         const segmentName = segmentsMap[segment] ?? "Detalhes";
-        const Component = index === segments.length - 1 ? "li" : "a";
-        const mountSegmentUrl = (segment: string) => {
+        const BreadCrumbItem = index === segments.length - 1 ? "li" : "a";
+        const mountSegmentUrl = () => {
           return `/${segments.slice(0, index + 1).join("/")}`;
         };
+
         return (
-          <Component
+          <BreadCrumbItem
             key={index}
             className="breadcrumb-item"
-            href={mountSegmentUrl(segment)}
+            href={mountSegmentUrl()}
           >
             {segmentName}
-          </Component>
+          </BreadCrumbItem>
         );
       })}
     </ol>
