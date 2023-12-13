@@ -8,6 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         className="w-100"
         style={{
           paddingTop: "80px",
+          paddingBottom: "110px",
         }}
       >
         <Breadcrumb />

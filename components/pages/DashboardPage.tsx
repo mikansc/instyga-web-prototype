@@ -4,7 +4,6 @@ import Image from "next/image";
 import { CurrentCertificationPathHero } from "../CurrentCertificationPathHero";
 import { NoCertificationPathStartedHero } from "../NoCertificationPathStartedHero";
 import { SectionTitleBlock } from "../SectionTitleBlock";
-import { Container } from "../templates/Container";
 
 let courses = [
   {
@@ -89,7 +88,7 @@ let courses = [
 const DashboardPage = () => {
   const hasSignedToACertification = false;
   return (
-    <Container>
+    <>
       <div className="row">
         {hasSignedToACertification ? (
           <CurrentCertificationPathHero />
@@ -128,7 +127,7 @@ const DashboardPage = () => {
           </div>
         ))}
       </div>
-    </Container>
+    </>
   );
 };
 
