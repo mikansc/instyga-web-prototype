@@ -66,7 +66,7 @@ export const AllTestsPage = () => {
                     {test.certifications.map((certification) => {
                       return (
                         <Badge
-                          link="/certifications/1"
+                          link="/dashboard/paths/1"
                           key={certification}
                           color="primary"
                           tip={`Esta avaliação é parte da certificação ${certification}`}
