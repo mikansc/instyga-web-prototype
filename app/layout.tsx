@@ -18,7 +18,9 @@ export default function RootLayout({
     <html lang="pt-BR" style={{ height: "100%" }}>
       <body className="h-100">
         <Navbar />
+
         {children}
+
         <Footer />
 
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" />

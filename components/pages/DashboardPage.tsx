@@ -90,7 +90,7 @@ const DashboardPage = () => {
   const hasSignedToACertification = false;
   return (
     <Container>
-      <div className="row pt-5">
+      <div className="row">
         {hasSignedToACertification ? (
           <CurrentCertificationPathHero />
         ) : (

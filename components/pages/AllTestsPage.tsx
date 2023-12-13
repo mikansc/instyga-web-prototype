@@ -1,6 +1,5 @@
 import { SectionTitleBlock } from "../SectionTitleBlock";
 import { Badge } from "../elements/Badge";
-import { Container } from "../templates/Container";
 
 let tests = [
   {
@@ -21,11 +20,29 @@ let tests = [
     competencies: ["Código", "Linguagem"],
     certifications: ["Desenvolvedor Front-end", "Desenvolvedor Full-stack"],
   },
+  {
+    id: 4,
+    title: "Orientação à objetos com C#",
+    competencies: ["Código", "Linguagem"],
+    certifications: ["Desenvolvedor Back-end", "Desenvolvedor Full-stack"],
+  },
+  {
+    id: 5,
+    title: "Construção de APIs com C#",
+    competencies: ["Código", "Linguagem"],
+    certifications: ["Desenvolvedor Back-end", "Desenvolvedor Full-stack"],
+  },
+  {
+    id: 6,
+    title: "Construção de páginas com Razor",
+    competencies: ["Código", "Linguagem"],
+    certifications: ["Desenvolvedor Back-end", "Desenvolvedor Full-stack"],
+  },
 ];
 
 export const AllTestsPage = () => {
   return (
-    <Container>
+    <>
       <SectionTitleBlock
         title="Avaliações disponíveis"
         subtitle="Escolha a avaliação desejada"
@@ -68,6 +85,6 @@ export const AllTestsPage = () => {
           );
         })}
       </div>
-    </Container>
+    </>
   );
 };

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { SectionTitleBlock } from "../SectionTitleBlock";
-import { Container } from "../templates/Container";
 
 let certificationPaths = [
   {
@@ -52,7 +51,7 @@ let certificationPaths = [
 
 export const AllPathsPage = () => {
   return (
-    <Container>
+    <>
       <SectionTitleBlock
         title="Certificações disponíveis"
         subtitle="Escolha a certificação desejada"
@@ -100,6 +99,6 @@ export const AllPathsPage = () => {
           );
         })}
       </div>
-    </Container>
+    </>
   );
 };

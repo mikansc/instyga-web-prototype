@@ -3,7 +3,7 @@ import { SectionTitleBlock } from "./SectionTitleBlock";
 
 export const NoCertificationPathStartedHero = () => {
   return (
-    <div className="col">
+    <div className="my-3 w-100">
       <div className="card shadow">
         <div className="card-body">
           <SectionTitleBlock
