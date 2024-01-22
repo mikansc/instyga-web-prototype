@@ -25,7 +25,7 @@ export const LoginForm = () => {
         />
       </div>
       <div className="d-grid gap-2 mt-4">
-        <Link className="btn btn-primary" href="/dashboard">
+        <Link className="btn btn-primary" href="/prototype/dashboard">
           Acessar
         </Link>
       </div>

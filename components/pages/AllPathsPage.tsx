@@ -97,7 +97,7 @@ export const AllPathsPage = () => {
                 </div>
                 <div className="align-self-center">
                   <Link
-                    href={`paths/${String(certificationPath.id)}`}
+                    href={`prototype/paths/${String(certificationPath.id)}`}
                     className="btn btn-primary"
                   >
                     Ver certificação

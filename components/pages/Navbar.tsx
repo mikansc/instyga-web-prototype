@@ -9,7 +9,7 @@ export const Navbar = () => {
         </Link>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link" href="/contact">
+            <Link className="nav-link" href="/prototype/contact">
               Contato
             </Link>
           </li>

@@ -12,10 +12,10 @@ export const NoCertificationPathStartedHero = () => {
               "Escolha uma avaliação ou uma trilha de certificação e comece a estudar agora mesmo!"
             }
           />
-          <Link href="/dashboard/paths" className="btn btn-primary">
+          <Link href="/prototype/dashboard/paths" className="btn btn-primary">
             Escolher uma certificação
           </Link>
-          <Link href="/dashboard/tests" className="btn btn-link">
+          <Link href="/prototype/dashboard/tests" className="btn btn-link">
             Escolher uma avaliação individual
           </Link>
         </div>
