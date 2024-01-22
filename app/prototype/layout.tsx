@@ -1,14 +1,8 @@
+import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
-import { Inter as FontInter } from "next/font/google";
 import Script from "next/script";
-
-import { cn } from "@/lib/utils";
-import "../assets/styles/globals.scss";
-
-export const fontSans = FontInter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 export const metadata: Metadata = {
   title: "Instyga",
@@ -22,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" style={{ height: "100%" }}>
-      <body className={cn("h-100", fontSans.variable)}>{children}</body>
+      <body className="h-100">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
       <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" />
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" />
       <Script
