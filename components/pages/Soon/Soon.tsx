@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./Soon.module.scss";
 
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -9,7 +8,6 @@ import { FaLinkedin } from "react-icons/fa6";
 import Logo from "../../../assets/images/instyga-logo.svg";
 
 export const Soon = () => {
-  console.log(styles);
   return (
     <div
       className="xl:container d-flex justify-content-center align-items-center w-full m-auto py-8"
