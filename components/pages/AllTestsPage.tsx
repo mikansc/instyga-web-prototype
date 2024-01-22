@@ -1,12 +1,5 @@
-import { SectionTitleBlock } from "../SectionTitleBlock";
-import { Container } from "../templates/Container";
-// competencies: [
-//   "Código",
-//   "Linguagem",
-//   "Desenvolvimento de Software",
-//   "Interpretação de código",
-//   "Debugging",
-// ],
+import { Badge } from "../elements/Badge";
+import { SectionTitleBlock } from "./SectionTitleBlock";
 
 let tests = [
   {
@@ -27,11 +20,29 @@ let tests = [
     competencies: ["Código", "Linguagem"],
     certifications: ["Desenvolvedor Front-end", "Desenvolvedor Full-stack"],
   },
+  {
+    id: 4,
+    title: "Orientação à objetos com C#",
+    competencies: ["Código", "Linguagem"],
+    certifications: ["Desenvolvedor Back-end", "Desenvolvedor Full-stack"],
+  },
+  {
+    id: 5,
+    title: "Construção de APIs com C#",
+    competencies: ["Código", "Linguagem"],
+    certifications: ["Desenvolvedor Back-end", "Desenvolvedor Full-stack"],
+  },
+  {
+    id: 6,
+    title: "Construção de páginas com Razor",
+    competencies: ["Código", "Linguagem"],
+    certifications: ["Desenvolvedor Back-end", "Desenvolvedor Full-stack"],
+  },
 ];
 
 export const AllTestsPage = () => {
   return (
-    <Container>
+    <>
       <SectionTitleBlock
         title="Avaliações disponíveis"
         subtitle="Escolha a avaliação desejada"
@@ -48,24 +59,22 @@ export const AllTestsPage = () => {
                   <h5 className="card-title">{test.title}</h5>
                   <div className="d-flex mt-2">
                     {test.competencies.map((competency) => (
-                      <span
-                        key={competency}
-                        className="badge bg-secondary me-1"
-                      >
+                      <Badge key={competency} color="secondary">
                         {competency}
-                      </span>
+                      </Badge>
                     ))}
-                    {test.certifications.map((certification) => (
-                      <span
-                        key={certification}
-                        className="badge bg-primary me-1"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="bottom"
-                        data-bs-title="This top tooltip is themed via CSS variables."
-                      >
-                        {certification}
-                      </span>
-                    ))}
+                    {test.certifications.map((certification) => {
+                      return (
+                        <Badge
+                          link="/dashboard/paths/1"
+                          key={certification}
+                          color="primary"
+                          tip={`Esta avaliação é parte da certificação ${certification}`}
+                        >
+                          {certification}
+                        </Badge>
+                      );
+                    })}
                   </div>
                 </div>
                 <div className="">
@@ -76,6 +85,6 @@ export const AllTestsPage = () => {
           );
         })}
       </div>
-    </Container>
+    </>
   );
 };

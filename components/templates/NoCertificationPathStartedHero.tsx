@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { SectionTitleBlock } from "./SectionTitleBlock";
+import { SectionTitleBlock } from "../pages/SectionTitleBlock";
 
 export const NoCertificationPathStartedHero = () => {
   return (
-    <div className="col">
+    <div className="my-3 w-100">
       <div className="card shadow">
         <div className="card-body">
           <SectionTitleBlock
@@ -12,10 +12,10 @@ export const NoCertificationPathStartedHero = () => {
               "Escolha uma avaliação ou uma trilha de certificação e comece a estudar agora mesmo!"
             }
           />
-          <Link href="/dashboard/all-paths" className="btn btn-primary">
+          <Link href="/dashboard/paths" className="btn btn-primary">
             Escolher uma certificação
           </Link>
-          <Link href="/dashboard/all-tests" className="btn btn-link">
+          <Link href="/dashboard/tests" className="btn btn-link">
             Escolher uma avaliação individual
           </Link>
         </div>
