@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { FaLinkedin } from "react-icons/fa6";
 import Logo from "../../../assets/images/instyga-logo.svg";
 
 export const Soon = () => {
@@ -35,7 +36,6 @@ export const Soon = () => {
             placeholder="email@exemplo.com"
           />
         </div>
-
         <span
           className="text-xs leading-6 font-light block mt-8"
           style={{ color: "#A0A0A0" }}
@@ -53,9 +53,22 @@ export const Soon = () => {
             </span>
           </Label>
         </div>
-        <Button className="d-block w-28" type="submit">
-          Enviar
-        </Button>
+        <div className="d-flex align-items-center">
+          <Button className="w-36 bg-blue-950" type="submit">
+            Enviar
+          </Button>
+          <div className="inline-block ml-4">
+            <a
+              href="https://www.linkedin.com/company/instyga"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-blue-500 leading-6 font-light"
+            >
+              <FaLinkedin className="inline mr-2" />
+              <span>Instyga no Linkedin</span>
+            </a>
+          </div>
+        </div>
       </form>
     </div>
   );
