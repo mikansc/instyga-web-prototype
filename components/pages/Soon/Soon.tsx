@@ -4,10 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { redirect } from "next/navigation";
 import { FaLinkedin } from "react-icons/fa6";
 import Logo from "../../../assets/images/instyga-logo.svg";
 
 export const Soon = () => {
+  async function submitConversion(formData: FormData) {
+    "use server";
+    redirect("/obrigado");
+  }
+
   return (
     <div
       className="xl:container d-flex justify-content-center align-items-center w-full m-auto py-8"
@@ -19,7 +25,11 @@ export const Soon = () => {
         promissora que já surgiu no mercado. Para receber as novidades,
         inscreva-se na nossa lista de contato.
       </span>
-      <form className="my-8" name="instyga_homepage_pre-mvp">
+      <form
+        action={submitConversion}
+        className="my-8"
+        name="instyga_homepage_pre-mvp"
+      >
         <div className="grid grid-cols-2 gap-4 mb-4">
           <Input
             type="text"

@@ -1,4 +1,4 @@
-import { Soon } from "@/components/pages/Soon/Soon";
+import { Soon } from "@/components/pages/Soon";
 
 export default function Home() {
   return <Soon />;
