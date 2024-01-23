@@ -19,7 +19,7 @@ export const Soon = () => {
         promissora que já surgiu no mercado. Para receber as novidades,
         inscreva-se na nossa lista de contato.
       </span>
-      <form className="my-8">
+      <form className="my-8" name="instyga_homepage_pre-mvp">
         <div className="grid grid-cols-2 gap-4 mb-4">
           <Input
             type="text"
