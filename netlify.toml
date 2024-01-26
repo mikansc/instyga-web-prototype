@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publis = ".next"
+[[redirects]]
+  from = "/index.html"
+  status = 200
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
