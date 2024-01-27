@@ -1,5 +1,5 @@
-import { Soon } from "@/components/pages/Soon";
+import { IndexPage } from "@/components/pages/Index/IndexPage";
 
 export default function Home() {
-  return <Soon />;
+  return <IndexPage />;
 }

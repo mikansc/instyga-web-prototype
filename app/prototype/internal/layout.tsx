@@ -1,5 +1,5 @@
+import { Container } from "@/components/atoms/Container/Container";
 import { Breadcrumb } from "@/components/elements/Breadcrumb";
-import { Container } from "@/components/templates/Container";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
