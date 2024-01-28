@@ -14,7 +14,7 @@ export const Appbar = ({
 
   const isLoggedIn = Boolean(user);
 
-  const isDeveloperRollout = localStorage.getItem("iauth");
+  const isDeveloperRollout = window.localStorage?.getItem("iauth");
 
   return (
     <div className="w-full flex justify-between items-center">

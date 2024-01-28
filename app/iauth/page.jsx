@@ -1,11 +1,12 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
 const IAuth = () => {
   const router = useRouter();
   const setVariable = () => {
-    localStorage.setItem("iauth", "true");
+    window.localStorage?.setItem("iauth", "true");
     router.replace("/");
   };
   return (
