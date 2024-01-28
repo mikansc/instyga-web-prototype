@@ -7,6 +7,8 @@ import "@/assets/styles/globals.scss";
 import { Container } from "@/components/atoms/Container";
 import { Appbar } from "@/components/molecules/Appbar";
 import { cn } from "@/lib/utils";
+import { getSession } from "@auth0/nextjs-auth0";
+import { redirect } from "next/navigation";
 
 const fontSans = Montserrat({
   subsets: ["latin"],
@@ -17,11 +19,16 @@ export const metadata: Metadata = {
   description: "Prototype for Instyga",
 };
 
-export default function RootLayout({
-  children,
-}: {
+type Props = {
   children: React.ReactNode;
-}) {
+};
+
+export default async function RootLayout({ children }: Props) {
+  const data = await getSession();
+
+  if (!data?.user) {
+    redirect("/");
+  }
   return (
     <html lang="pt-BR" style={{ height: "100%" }}>
       <body

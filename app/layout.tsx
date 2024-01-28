@@ -5,6 +5,7 @@ import Script from "next/script";
 import React from "react";
 
 import { cn } from "@/lib/utils";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 import "../assets/styles/globals.scss";
 
 const fontSans = Montserrat({
@@ -16,21 +17,24 @@ export const metadata: Metadata = {
   description: "Prototype for Instyga",
 };
 
-export default function RootLayout({
-  children,
-}: {
+type Props = {
   children: React.ReactNode;
-}) {
+};
+
+export default async function RootLayout({ children }: Props) {
   return (
     <html lang="pt-BR" style={{ height: "100%" }}>
-      <body
-        className={cn("h-100", fontSans.className)}
-        style={{
-          height: "100%",
-        }}
-      >
-        {children}
-      </body>
+      <UserProvider>
+        <body
+          className={cn("h-100", fontSans.className)}
+          style={{
+            height: "100%",
+          }}
+        >
+          {children}
+        </body>
+      </UserProvider>
+
       <Script
         strategy="afterInteractive"
         src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/fe74e9ac-8dac-4d7f-b51f-917437dbce26-loader.js"
