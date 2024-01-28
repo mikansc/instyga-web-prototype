@@ -32,7 +32,7 @@ export default async function RootLayout({ children }: Props) {
   return (
     <html lang="pt-BR" style={{ height: "100%" }}>
       <body
-        className={cn("h-100", fontSans.className)}
+        className={cn("h-100 bg-white", fontSans.className)}
         style={{
           height: "100%",
         }}
