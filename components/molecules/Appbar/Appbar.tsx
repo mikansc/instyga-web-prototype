@@ -14,23 +14,27 @@ export const Appbar = ({
 
   const isLoggedIn = Boolean(user);
 
+  const isDeveloperRollout = localStorage.getItem("iauth");
+
   return (
     <div className="w-full flex justify-between items-center">
       <Logo variant={variant} />
-      <div className="flex gap-4 items-center">
-        {!isLoggedIn ? (
-          <Button asChild className="bg-blue-600">
-            <a href="/api/auth/login">Login</a>
+      {isDeveloperRollout && (
+        <div className="flex gap-4 items-center">
+          {!isLoggedIn ? (
+            <Button asChild className="bg-blue-600">
+              <a href="/api/auth/login">Login</a>
+            </Button>
+          ) : (
+            <Button asChild className="bg-blue-600">
+              <a href="/api/auth/logout">Logout</a>
+            </Button>
+          )}
+          <Button asChild variant="link" className="text-white">
+            <Link href="/">Cadastrar</Link>
           </Button>
-        ) : (
-          <Button asChild className="bg-blue-600">
-            <a href="/api/auth/logout">Logout</a>
-          </Button>
-        )}
-        <Button asChild variant="link" className="text-white">
-          <Link href="/">Cadastrar</Link>
-        </Button>
-      </div>
+        </div>
+      )}
     </div>
   );
 };
